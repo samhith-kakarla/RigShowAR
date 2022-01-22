@@ -1,0 +1,19 @@
+/* .navbar {
+  border-bottom: solid 1px #EBEBEB;
+}
+.bottom-tab-nav {
+  border-top: solid 1px #EBEBEB;
+} */
+
+.navLink,
+.bottomNavLink {
+  color: #1F1F1F;
+}
+
+.bottomNavLink.active {
+  color: #FC7636;
+}
+
+.bottomTabLabel {
+  font-size: 12px;
+}
