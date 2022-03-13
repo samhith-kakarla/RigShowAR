@@ -1,4 +1,5 @@
-import './styles.css';
+import Dashboard from './js/dashboard';
+import Camera from './js/camera';
 
 const App = function _App() {
   return `
@@ -21,7 +22,7 @@ const App = function _App() {
         ></i>
       </div>
     </nav>
-  `
+  `;
 };
 
 App.state = {
@@ -42,6 +43,12 @@ const navigate = () => {
   const cameraIcon = document.getElementById("camera-icon");
   dashboardIcon.addEventListener("click", App.state.changeToDashboard);
   cameraIcon.addEventListener("click", App.state.changeToCamera);
+
+  if (App.state.activeTab === 0) {
+    document.getElementById("page-content").innerHTML = Dashboard();
+  } else if (App.state.activeTab === 1) {
+    document.getElementById("page-content").innerHTML = Camera();
+  };
 };
 
 navigate();
